@@ -866,10 +866,10 @@ $database->query("
 
 
 
-// Add new Sessions Table
+// Add new dbsessions Table
 
 $database->query("
- CREATE TABLE IF NOT EXISTS `".TABLE_PREFIX."sessions` (
+ CREATE TABLE IF NOT EXISTS `".TABLE_PREFIX."dbsessions` (
   `id` char(32) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Id',
   `data` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Data',
   `last_accessed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Last timestamp',

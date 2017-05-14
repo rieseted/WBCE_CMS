@@ -15,10 +15,10 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 --
 -- --------------------------------------------------------
 --
--- Tabellenstruktur für Tabelle `sessions`
+-- Tabellenstruktur für Tabelle `dbsessions`
 --
 
-CREATE TABLE IF NOT EXISTS `{TABLE_PREFIX}sessions` (
+CREATE TABLE IF NOT EXISTS `{TABLE_PREFIX}dbsessions` (
   `id` char(32) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Id',
   `data` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Data',
   `last_accessed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Last timestamp',

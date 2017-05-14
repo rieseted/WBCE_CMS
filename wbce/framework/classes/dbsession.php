@@ -104,7 +104,7 @@ class DbSession
  
   public  function read($sid)
   {
-    $sql = "SELECT `data` FROM `{TP}sessions` WHERE `id` = '".$this->database->escapeString($sid)."' LIMIT 1";
+    $sql = "SELECT `data` FROM `{TP}dbsessions` WHERE `id` = '".$this->database->escapeString($sid)."' LIMIT 1";
     $res = $this->database->query($sql);
     if($this->database->is_error()) return '';
     if($res->numRows() == 1)
@@ -123,7 +123,7 @@ class DbSession
   {
     $user=WbSession::get('USER_ID');
     if (!is_numeric($user)) $user='0';
-    $sql = "REPLACE INTO `{TP}sessions` (`id`, `data`, `user`) 
+    $sql = "REPLACE INTO `{TP}dbsessions` (`id`, `data`, `user`) 
     VALUES ('".$this->database->escapeString($sid)."', '".$this->database->escapeString($data)."', '$user')";
     $this->database->query($sql);
     
@@ -132,7 +132,7 @@ class DbSession
  
   public  function destroy($sid)
   {
-    $sql = "DELETE FROM `{TP}sessions` WHERE `id` = '".$this->database->escapeString($sid)."'"; 
+    $sql = "DELETE FROM `{TP}dbsessions` WHERE `id` = '".$this->database->escapeString($sid)."'"; 
     $this->database->query($sql);
  
     $_SESSION = array();
@@ -145,7 +145,7 @@ class DbSession
   {
     if (Settings::Get ("wb_secform_timeout") !==false)
         $expire=Settings::Get ("wb_secform_timeout");
-    $q = "DELETE FROM `{TP}sessions` WHERE DATE_ADD(`last_accessed`, INTERVAL ".(int) $expire." SECOND) < NOW()"; 
+    $q = "DELETE FROM `{TP}dbsessions` WHERE DATE_ADD(`last_accessed`, INTERVAL ".(int) $expire." SECOND) < NOW()"; 
     $this->database->query($q);
  
     return true;
