@@ -857,12 +857,11 @@ if (!defined('WB_WYSIWYG_EDITOR')) Settings::Set ("wb_wysiwyg_editor", WYSIWYG_E
 
 // NEw admin Permission "preferences" added
 $database->query("
-INSERT INTO `".TABLE_PREFIX."groups`
-(`group_id`, `name`, `system_permissions`, `module_permissions`, `template_permissions`)
-VALUES
-(1, 'Administrators', 'pages,pages_view,pages_add,pages_add_l0,pages_settings,pages_modify,pages_intro,pages_delete,media,media_view,media_upload,media_rename,media_delete,media_create,addons,modules,modules_view,modules_install,modules_uninstall,templates,templates_view,templates_install,templates_uninstall,languages,languages_view,languages_install,languages_uninstall,settings,settings_basic,settings_advanced,access,users,users_view,users_add,users_modify,users_delete,groups,groups_view,groups_add,groups_modify,groups_delete,admintools,preferences,preferences_settings', '', '');
-
-
+ UPDATE `".TABLE_PREFIX."groups` 
+ SET `system_permissions`='pages,pages_view,pages_add,pages_add_l0,pages_settings,pages_modify,pages_intro,pages_delete,media,media_view,media_upload,media_rename,media_delete,media_create,addons,modules,modules_view,modules_install,modules_uninstall,templates,templates_view,templates_install,templates_uninstall,languages,languages_view,languages_install,languages_uninstall,settings,settings_basic,settings_advanced,access,users,users_view,users_add,users_modify,users_delete,groups,groups_view,groups_add,groups_modify,groups_delete,admintools,preferences,preferences_settings',
+ `module_permissions`='',
+ `template_permissions`='' 
+ WHERE `group_id`='1';
 ");
 
 
@@ -870,8 +869,7 @@ VALUES
 // Add new Sessions Table
 
 $database->query("
-
-CREATE TABLE IF NOT EXISTS `{TABLE_PREFIX}sessions` (
+ CREATE TABLE IF NOT EXISTS `".TABLE_PREFIX."sessions` (
   `id` char(32) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Id',
   `data` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT 'Session Data',
   `last_accessed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Last timestamp',
@@ -880,7 +878,6 @@ CREATE TABLE IF NOT EXISTS `{TABLE_PREFIX}sessions` (
    INDEX (`last_accessed`),
    INDEX (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='WBCE Session Table';
-
 ");
 
 
