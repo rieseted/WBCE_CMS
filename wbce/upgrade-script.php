@@ -107,6 +107,8 @@ function check_wb_tables()
 {
     global $database, $table_list;
 
+    echo "<br />refresh tables<br />";
+
     // if prefix inludes '_' or '%'
     $search_for = addcslashes(TABLE_PREFIX, '%_');
     $get_result = $database->query('SHOW TABLES LIKE "' . $search_for . '%"');
@@ -450,6 +452,7 @@ if (!in_array("mod_outputfilter_dashboard", $all_tables)) {
 // uninstall classical output filter module
 $file_name = WB_PATH . "/modules/output_filter/uninstall.php";
 if (file_exists($file_name)) {
+    echo "<br />Uninstall classical output_filter module<br />";
     include_once ($file_name);
 }
 
