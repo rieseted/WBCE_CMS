@@ -454,6 +454,7 @@ $file_name = WB_PATH . "/modules/output_filter/uninstall.php";
 if (file_exists($file_name)) {
     echo "<br />Uninstall classical output_filter module<br />";
     include_once ($file_name);
+    opf_io_rmdir(WB_PATH . "/modules/output_filter");
 }
 
 // check again all tables, to get a new array
