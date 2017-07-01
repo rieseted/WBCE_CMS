@@ -190,7 +190,7 @@ $( document ).ready(function() {
 		e.preventDefault();
 		if (menuopen == false) {
 			var nav =  $("#nav").html();
-			nav += '<form action="'+WB_URL+'/search/index.php" method="get"><input type="text" name="string" placeholder="search" class="searchstring" /><input type="image" class="submitbutton" src="'+WB_URL+'/templates/hortal/img/searchbutton.png" alt="Start"></form>';
+			nav += '<form action="'+WB_URL+'/search/index.php" method="get"><input type="text" name="string" placeholder="search" class="searchstring" /><input type="image" class="submitbutton" src="'+TEMPLATE_DIR+'/img/searchbutton.png" alt="Start"></form>';
 			$("#nav2").html(nav) ;
 			
 			$("#nav2close").show(100)
@@ -223,7 +223,7 @@ function initmobilemenu() {
 		
 		$("#nav2 li a.menu-expand").unbind('click').bind('click', function(e) {			
 			
-			if ($(this).parent("li").hasClass("is_opened") ) {return true;} //wenn schon geklickt worden, also:class is_opened link ausführen
+			if ($(this).parent("li").hasClass("is_opened") ) {return true;} //wenn schon geklickt worden, also:class is_opened link ausfÃ¼hren
 			
 			e.preventDefault();
 			$(this).toggleClass("is_opened");
