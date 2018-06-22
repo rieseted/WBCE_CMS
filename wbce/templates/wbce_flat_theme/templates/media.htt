@@ -7,7 +7,7 @@
         <section class="fg12 content-box">
             <div class="fg12 {DISPLAY_SETTINGS}" id="media-tools" style="text-align: right; margin-bottom: 5px; margin-top: 10px; padding: 0 10px;"> <i class="fa fa-gears"></i>&nbsp; <a href="setparameter.php" target="browse">{CHANGE_SETTINGS}</a> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fa fa-refresh"></i>&nbsp; <a href="browse.php?dir={CURRENT_DIR}" target="browse">{TEXT_RELOAD}</a> </div>
             <div class="fg12">
-                <iframe id="browse-frame" name="browse" width="100%" height="650" src="browse.php" scrolling="yes" frameborder="0"></iframe>
+                <iframe id="browse-frame" name="browse" width="100%" height="500" src="browse.php" scrolling="yes" frameborder="0"></iframe>
             </div>
         </section>
     </section>
@@ -113,6 +113,6 @@
 <script>
 	$(document).ready(function(){
 		var leftHeight = $('#media-upload').height();
-		$('#browse-frame').height(leftHeight - 90);
+		$('#browse-frame').height(leftHeight - 135);
 	});
 </script> 

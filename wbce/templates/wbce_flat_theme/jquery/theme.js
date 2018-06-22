@@ -18,48 +18,15 @@ function getUrlVars() {
 }
 
 $(document).ready(function () {
-    
-    // make sidebar state sticky --> call plugin sticky elements
-	// call this first --> otherwise sidebar could be open for a moment
-	$('.stickySidebarElement').stickyElements({
-		stickyMethod: 'class',
-		stickyFormatClass: 'closedsidebar',
-		pageModus: 'domainWide'
-	});  // ENDE make sidebar state sticky
 
-	// toggle-action for sidebar
-	$('#sidebararea_togglebutton').click(function () {
-		if ($(this).parent().hasClass('closedsidebar')) {
-			// close sidebar
-			$('#pagetopmenu').removeClass('closedsidebar', 1000);
-			$('#mainarea').removeClass('closedsidebar', 1000);
-			$('#sidebararea').removeClass('closedsidebar', 1000);
-			$('#mainmenu').removeClass('closedsidebar', 1000);
-			$('#mainmenu ul').removeClass('closedsidebar', 1000, function () {
-				$('#userbox').removeClass('closedsidebar', 800);
-				$('#systeminfo').removeClass('closedsidebar', 800);
-			});
-		} else {
-			// sidebar is open --> close sidebar
-			$('#userbox').addClass('closedsidebar', 800);
-			$('#systeminfo').addClass('closedsidebar', 800);
-			$('#sidebararea').addClass('closedsidebar', 1000);
-			$('#mainmenu ul').addClass('closedsidebar', 1000);
-			$('#mainmenu').addClass('closedsidebar', 1000);
-			$('#pagetopmenu').addClass('closedsidebar', 1000);
-			$('#mainarea').addClass('closedsidebar', 1000);
-			sidebararea_close_switch = 0;
-		}
-	});  // ENDE script toggle action for sidebar
-
-    // pagetopmenu --> check if link is active link and add active class to parent <li>
-	var pageurl = window.location.pathname,
-	urlRegExp = new RegExp(pageurl.replace(/\/$/,'') + "$");
-	$('#pagetopmenu a').each(function () {
-		if (urlRegExp.test(this.href.replace(/\/$/,''))) {
-			$(this).parent().addClass('current');
-		}
-	});
+    // menulink --> check if link is active link and add active class to parent <li>
+    var pageurl = window.location.pathname,
+    urlRegExp = new RegExp(pageurl.replace(/\/$/,'') + "$");
+    $('#foo a').each(function () {
+        if (urlRegExp.test(this.href.replace(/\/$/,''))) {
+            $(this).parent().addClass('current');
+        }
+    });
 
     // special for hard coded page pages --> add class 'page_titel' to first head of page
 	var page_url = document.URL;
@@ -74,11 +41,6 @@ $(document).ready(function () {
 		tb_replacestring = tb_replacestring.replace(/<\/a>\, /g, '</a>');
 		$(this).html(tb_replacestring);
 	}); // ENDE special remove commas from themeboxes
-
-	// enable special stylings for file input fields
-	$("input[type=file]").nicefileinput({
-		label : ''
-	});
 
 	/*** enable tabs in textareas (class "tabbed") ********************/
 	$(document).delegate('.tabbed', 'keydown', function (e) {
@@ -104,29 +66,6 @@ $(document).ready(function () {
 	$('#show-advanced a').click(function (e) {
 		e.preventDefault();
 		$('#advanced-block').toggle();
-	});
-
-	/*** toggle the upload fields in media ****************************/
-	$('#unzip').click(function () {
-		if ($('#file2').css('display') == 'block') {
-			for (i = 2; i <= 10; i++) {
-				$('#file' + i).css('display', 'none');
-			}
-			$('#delzip').show();
-		} else {
-			for (i = 2; i <= 10; i++) {
-				$('#file' + i).css('display', 'block');
-			}
-			$('#delzip').hide();
-		}
-	});
-
-	/*** synchronize the upload target folder in media ****************/
-	$('#upload-target').change(function () {
-		var targetVal = $(this).val();
-		var targetRef = targetVal.substr(6, 100);
-		$('#target-folder').val(targetVal);
-		browse.location.href = 'browse.php?dir=' + targetRef;
 	});
 
 }); // ENDE document.ready
