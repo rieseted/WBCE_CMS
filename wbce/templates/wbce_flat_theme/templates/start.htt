@@ -1,7 +1,7 @@
 <!-- BEGIN main_block -->
 
 <div id="page_start">
-    <h2 class="page_titel">Home</h2>
+    <h2 class="page_titel">Dashboard</h2>
     
     <div class="alertbox" style="{DISPLAY_WARNING};"> {WARNING} </div>
     

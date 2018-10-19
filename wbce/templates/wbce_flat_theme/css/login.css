@@ -13,6 +13,7 @@ a:hover { text-decoration: none; }
 .page_login input[type='submit'] { display: inline-block; max-width: 300px; border: none; color: #f3f3f3; background-color: #25588f; }
 .page_login input[type="submit"]:hover { background-color: #225183; }
 .login_license { font-size: 11px; }
+.page_login_forgottenlink { font-size: 13px; }
 @media (max-width:550px) {
 .page_login_logo { background: none; padding-right: 0; right: 10px; }
 .page_login_slogan { position: relative; right: auto; text-align: center; }

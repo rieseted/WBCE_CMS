@@ -13,17 +13,6 @@ body { font-family: open_sans, "Helvetica Neue", Helvetica, Arial, sans-serif; f
 .nav-collapse li:first-child a { border-top: 0; }
 .nav-collapse li:last-child a { border-bottom: 0; }
 .nav-toggle { display: none; }
-
-.main {
-    padding: 16px;
-    position: absolute; 
-    box-shadow: 0 0 15px rgba(0,0,0, .6); 
-    top: .8em; 
-    right: 0; 
-    width: 76%; 
-    background: #f3f3f3;
-}
-
 @media screen and (max-width: 40em) { 
 .js .nav-collapse { clip: rect(0 0 0 0); max-height: 0; position: absolute; display: block; overflow: hidden; }
 .nav-collapse { top: 0; width: 100%; position: relative; }
@@ -60,7 +49,7 @@ body { font-family: open_sans, "Helvetica Neue", Helvetica, Arial, sans-serif; f
 #systeminfo { color: #f3f3f3; margin-top: 32px; margin-left: 16px; font-size: 11px; line-height: 16px; }
 #systeminfo a { color: #f3f3f3; text-decoration: none; }
 #systeminfo a:hover { color: #999; text-decoration: underline; }
-#logo img { margin: 0 4%; max-height: 100px; }
+#logo img { margin: 0 2%; }
 /* some width overwrites */
 .wdt50 { width: 50px !important; }
 .wdt60 { width: 60px !important; }
@@ -244,7 +233,7 @@ div.pages_list .modify { width: 90px; }
 div.pages_list .title { text-align: left; font-weight: bold; font-size: 14px; margin-bottom: 5px; width: auto; }
 div.pages_list table tr { border-bottom: 3px solid transparent; background-color: #e8eaee; transition: 0.5s; }
 div.pages_list table tr:hover { background-color: #d9dde3; transition: 0.5s; }
-#pagesPage #pageListCard ul td.toggle { width: 30px; padding: 4px 8px; }
+#pagesPage #pageListCard ul td.toggle { width: 30px; padding: 2px; }
 #pagesPage #pageListCard ul ul td.toggle { width: 80px; padding-left: 40px; }
 #pagesPage #pageListCard ul ul ul td.toggle { width: 120px; padding-left: 80px; }
 #pagesPage #pageListCard ul ul ul ul td.toggle { width: 160px; padding-left: 120px; }
