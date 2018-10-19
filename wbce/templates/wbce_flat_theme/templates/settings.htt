@@ -4,12 +4,12 @@
     <input type="hidden" name="advanced" value="{ADVANCED}">
     <input type="hidden" name="wbmailer_smtp_auth" id="wbmailer_smtp_auth" value="true">
     {FTAN}
-
+    
     <!-- GENERAL SETTINGS ****************************************** -->
     <h2 class="page_titel"> {HEADING_GENERAL_SETTINGS}
         <div class="headline-link" {DISPLAY_ADVANCED_BUTTON}> <a href="#settings-general-settings" title="{MODE_SWITCH_WARNING}" onclick="window.location = '{ADVANCED_LINK}#settings-general-settings'; return false;"> {ADVANCED_BUTTON} </a> </div>
     </h2>
-
+    
     <section class="content-box" id="settings-general-settings">
         <div class="row top">
             <div class="fg3">{TEXT_WEBSITE_TITLE}:</div>
@@ -41,7 +41,7 @@
                 <textarea name="website_footer" class="wdt300">{WEBSITE_FOOTER}</textarea>
             </div>
         </div>
-
+        
         <!-- BEGIN show_page_level_limit_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -56,7 +56,7 @@
             </div>
         </section>
         <!-- END show_page_level_limit_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_PAGE_TRASH}:</div>
             <div class="fg9">
@@ -79,7 +79,7 @@
                 </label>
             </div>
         </div>
-
+        
         <!-- BEGIN show_checkbox_1_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -110,7 +110,7 @@
             </div>
         </section>
         <!-- END show_checkbox_1_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_HOME_FOLDERS}:</div>
             <div class="fg9">
@@ -124,7 +124,7 @@
                 </label>
             </div>
         </div>
-
+        
         <!-- BEGIN show_checkbox_2_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -155,7 +155,7 @@
             </div>
         </section>
         <!-- END show_checkbox_2_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_INTRO_PAGE}:</div>
             <div class="fg9">
@@ -169,7 +169,7 @@
                 </label>
             </div>
         </div>
-
+        
         <!-- BEGIN show_checkbox_3_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -200,7 +200,7 @@
             </div>
         </section>
         <!-- END show_checkbox_3_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_LOGIN}:</div>
             <div class="fg9">
@@ -214,7 +214,7 @@
                 </label>
             </div>
         </div>
-
+        
         <!-- BEGIN show_redirect_timer_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -225,7 +225,7 @@
             </div>
         </section>
         <!-- END show_redirect_timer_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_SIGNUP}:</div>
             <div class="fg9">
@@ -237,7 +237,7 @@
                 </select>
             </div>
         </div>
-
+        
         <!-- BEGIN show_php_error_level_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -253,7 +253,7 @@
             </div>
         </section>
         <!-- END show_php_error_level_block -->
-
+        
         <!-- BEGIN show_wysiwyg_block -->
         <section {DISPLAY_ADVANCED}>
             <!-- needed for what ?!? -->
@@ -269,7 +269,7 @@
             </div>
         </section>
         <!-- END show_wysiwyg_block -->
-
+        
         <hr class="fg12">
         <div class="row">
             <div class="fg9 push3">
@@ -277,12 +277,12 @@
             </div>
         </div>
     </section>
-
+    
     <!-- DEFAULT SETTINGS ****************************************** -->
     <h2 class="page_titel"> {HEADING_DEFAULT_SETTINGS}
         <div class="headline-link" {DISPLAY_ADVANCED_BUTTON}> <a href="#settings-default-settings" title="{MODE_SWITCH_WARNING}" onclick="window.location = '{ADVANCED_LINK}#settings-default-settings'; return false;"> {ADVANCED_BUTTON} </a> </div>
     </h2>
-
+    
     <section class="content-box" id="settings-default-settings">
         <div class="row top">
             <div class="fg3">{TEXT_LANGUAGE}:</div>
@@ -294,7 +294,7 @@
                 </select>
             </div>
         </div>
-
+        
         <!-- BEGIN show_charset_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -310,7 +310,7 @@
             </div>
         </section>
         <!-- END show_charset_block -->
-
+        
         <div class="row">
             <div class="fg3">{TEXT_TIMEZONE}:</div>
             <div class="fg9">
@@ -371,12 +371,12 @@
             </div>
         </div>
     </section>
-
+    
     <!-- SEARCH SETTINGS ****************************************** -->
     <h2 class="page_titel"> {HEADING_SEARCH_SETTINGS}
         <div class="headline-link" {DISPLAY_ADVANCED_BUTTON}> <a href="#settings-search-settings" title="{MODE_SWITCH_WARNING}" onclick="window.location = '{ADVANCED_LINK}#settings-search-settings'; return false;"> {ADVANCED_BUTTON} </a> </div>
     </h2>
-
+    
     <section class="content-box" id="settings-search-settings">
         <div class="row top">
             <div class="fg3">{TEXT_VISIBILITY}:</div>
@@ -399,7 +399,7 @@
                 </select>
             </div>
         </div>
-
+        
         <!-- BEGIN show_search_block -->
         <section {DISPLAY_ADVANCED}>
             <div class="row">
@@ -458,7 +458,7 @@
             </div>
         </section>
         <!-- END show_search_block -->
-
+        
         <hr class="fg12">
         <div class="row">
             <div class="fg9 push3">
@@ -466,12 +466,12 @@
             </div>
         </div>
     </section>
-
+    
     <!-- SERVER SETTINGS ****************************************** -->
     <h2 class="page_titel"> {HEADING_SERVER_SETTINGS}
 		<div class="headline-link" {DISPLAY_ADVANCED_BUTTON}> <a href="#settings-search-settings" title="{MODE_SWITCH_WARNING}" onclick="window.location = '{ADVANCED_LINK}#settings-search-settings'; return false;"> {ADVANCED_BUTTON} </a> </div>
     </h2>
-
+    
     <section class="content-box" id="settings-server-settings">
         <div class="row top">
             <div class="fg3">{TEXT_SERVER_OPERATING_SYSTEM}:</div>
@@ -560,8 +560,8 @@
                 <input type="checkbox" name="dir_o_e" id="dir_o_e" value="true"{DIR_O_E_CHECKED}>
             </div>
         </section>
- 		<!-- END show_access_block -->
-
+        <!-- END show_access_block -->
+        
        <div class="row top">
             <div class="fg3">{TEXT_PAGES_DIRECTORY}:</div>
             <div class="fg9">
@@ -611,10 +611,10 @@
             </div>
         </div>
     </section>
-
+    
     <!-- MAILER SETTINGS ****************************************** -->
     <h2 class="page_titel"> {HEADING_WBMAILER_SETTINGS} </h2>
-
+    
     <section class="content-box" id="settings-wbmailer-settings">
         <p class="fg12 top bot desc">{TEXT_WBMAILER_DEFAULT_SETTINGS_NOTICE}</p>
         <hr class="fg12">

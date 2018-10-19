@@ -81,7 +81,6 @@
 
     // Output fixes
     $(function () {
-
         function refreshStripes() {
             $pageListUl.find('li:visible > table').each(function (index) {
                 if (index % 2 === 0) {
@@ -91,13 +90,12 @@
                 }
             });
         }
-
         var $pageList = $('.pages_list'),
                 $pageListUl = $pageList.children('ul'),
                 $toggleLinks = $('.toggle a'),
                 $btnExpand = $('.btn-expand'),
                 $btnCollapse = $('.btn-collapse');
-
+                
         $toggleLinks
                 .on('collapse-list', function (e) {
                     var $this = $(this);
@@ -105,7 +103,7 @@
                             .removeClass('expanded')
                             .addClass('collapsed')
                             .html('<i class="fa fa-fw fa-folder"></i>');
-
+                            
                     var id = $this.data('id');
                     $('#' + id, $pageListUl).hide();
                     localStorage.setItem(id, 'collapsed');
@@ -117,7 +115,7 @@
                             .removeClass('collapsed')
                             .addClass('expanded')
                             .html('<i class="fa fa-fw fa-folder-open"></i>');
-
+                            
                     var id = $this.data('id');
                     $('#' + id, $pageListUl).show();
                     localStorage.setItem(id, 'expanded');
@@ -125,7 +123,7 @@
                 })
                 .on('click', function (e) {
                     e.preventDefault();
-
+                    
                     var $this = $(this);
                     if ($this.hasClass('collapsed')) {
                         $this.trigger('expand-list');
@@ -133,10 +131,10 @@
                         $this.trigger('collapse-list');
                     }
                 });
-
+                
         $toggleLinks.each(function () {
             var $this = $(this);
-
+            
             var id = $this.data('id');
             if (localStorage.getItem(id) === 'collapsed') {
                 $this.trigger('collapse-list');
@@ -144,55 +142,55 @@
                 $this.trigger('expand-list');
             }
         });
-
+        
         $btnCollapse.on('click', function (e) {
             e.preventDefault;
             $toggleLinks.trigger('collapse-list');
             $btnCollapse.blur();
         });
-
+        
         $btnExpand.on('click', function (e) {
             e.preventDefault;
             $toggleLinks.trigger('expand-list');
             $btnExpand.blur();
         });
-
+        
         $pageList.show();
-
+        
         refreshStripes();
-
+        
         JsAdmin.DD.addMoveButton = function (tr, cell, op) {
             cell = cell - 1;
             if (op == 'down') {
                 cell++;
             }
-
+            
             var item = JsAdmin.movable_rows[tr.id];
             if (!JsAdmin.util.isNodeType(tr, 'tr')) {
                 var rows = tr.getElementsByTagName('tr');
                 tr = rows[0];
             }
-
+            
             var html = '<a href="' + item.url + 'move_' + op + '.php' + item.params
                     + '"><i class="fa fa-chevron-circle-' + op
                     + '"></i></a>';
             tr.cells[cell].innerHTML = html;
         };
-
+        
         JsAdmin.DD.deleteMoveButton = function (tr, cell, op) {
             cell = cell - 1;
             if (op == 'down') {
                 cell++;
             }
-
+            
             if (!JsAdmin.util.isNodeType(tr, 'tr')) {
                 var rows = tr.getElementsByTagName('tr');
                 tr = rows[0];
             }
-
+            
             tr.cells[cell].innerHTML = '';
         };
-
+        
         JsAdmin.DD.liDDSwap.prototype.onDragEnter = function (e, id) {
             // Swap with other element
             var elt = id ? YAHOO.util.Dom.get(id) : null;
@@ -201,7 +199,7 @@
             var rowIndex = JsAdmin.util.getItemIndex(this.getEl());
             var wasFirst = !JsAdmin.util.getPreviousSiblingNode(this.getEl());
             var wasLast = !JsAdmin.util.getNextSiblingNode(this.getEl());
-
+            
             if (eltRowIndex < rowIndex) {
                 elt.parentNode.insertBefore(this.getEl(), elt);
             } else {
@@ -210,7 +208,7 @@
             // Fixup buttons
             var isFirst = !JsAdmin.util.getPreviousSiblingNode(this.getEl());
             var isLast = !JsAdmin.util.getNextSiblingNode(this.getEl());
-
+            
             if (wasFirst != isFirst) {
                 if (isFirst) {
                     JsAdmin.DD.deleteMoveButton(item.tr, this.buttonCell, 'up');
@@ -239,22 +237,22 @@
                     JsAdmin.DD.deleteMoveButton(JsAdmin.movable_rows[last.id].tr, this.buttonCell, 'down');
                 }
             }
-
+            
             refreshStripes();
-
+            
             this.DDM.refreshCache(this.groups);
         };
     });
-
+    
     function addChildPage(page_id)
     {
         // find and select the page in the parent dropdown
         $('#selectParent').val(page_id).trigger('change');
-
+        
         // set focus to add form
         document.add.title.focus();
     }
-
+    
     function toggleViewers() {
         if (document.add.visibility.value == 'private') {
             document.getElementById('viewers').style.display = 'block';
@@ -264,7 +262,6 @@
             document.getElementById('viewers').style.display = 'none';
         }
     }
-
 </script>
 
 {JS_ADMIN}

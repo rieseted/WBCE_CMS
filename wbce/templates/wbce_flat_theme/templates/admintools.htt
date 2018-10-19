@@ -21,34 +21,34 @@
 {TOOL_LIST} 
 
 <script>
-function kb_equal_height() {
-  var highest_element = 0;
- 
-  // Lösche die Höhe
-  $('.themebox').each(function() {
-    $(this).removeAttr('style');
-  });
-
-  // Prüfe, welches Element am höchsten ist
-  $('.themebox').each(function() {
-    if ($(this).height() > highest_element) {
-      highest_element = $(this).height();
-    }
-  });
-
-  // Weise diese Höhe allen Elementen zu.
-  $('.themebox').each(function() {
-    $(this).height(highest_element);
-  });
-};
-
-window.onload = kb_equal_height;
-
-var resizeTimer;
-$(window).resize(function() {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(kb_equal_height, 100);
-});
+    function kb_equal_height() {
+        var highest_element = 0;
+        
+        // Lösche die Höhe
+        $('.themebox').each(function() {
+            $(this).removeAttr('style');
+        });
+        
+        // Prüfe, welches Element am höchsten ist
+        $('.themebox').each(function() {
+        if ($(this).height() > highest_element) {
+            highest_element = $(this).height();
+        }
+    });
+    
+    // Weise diese Höhe allen Elementen zu.
+        $('.themebox').each(function() {
+            $(this).height(highest_element);
+        });
+    };
+    
+    window.onload = kb_equal_height;
+    var resizeTimer;
+    
+    $(window).resize(function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(kb_equal_height, 100);
+    });
 </script>	
 
 <!-- END main_block -->

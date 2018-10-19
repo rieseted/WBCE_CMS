@@ -11,14 +11,14 @@
             <div class="tb_content_outer">
                 <div class="tb_content"> <a class="tb_titel" href="{ADMIN_URL}/pages/index.php">{PAGES}</a> {PAGES_OVERVIEW}
                     <div class="dashboard_information"> </div>
-                    <!-- ENDE dashboard -->
                         <script> 
                             $(function(){
                                 $(".dashboard_information").load("{THEME_URL}/dashboard/dashboardinfos.php", function(){
                                     $(this).css({ opacity: 0, 'background-image': 'none' }).animate({opacity: 1}, 'slow');
                                 }); 
                             });
-                        </script> 
+                        </script>
+                    <!-- ENDE dashboard -->
                 </div>
                 <!-- ENDE tb_content -->
             </div>
@@ -38,6 +38,21 @@
             <!-- ENDE tb_footer -->
         </div>
         <!-- ENDE themebox -->
+        <div id="module_settings" class="themebox" style="{DISPLAY_SETTINGS};">
+            <div class="tb_header"> <a href="{ADMIN_URL}/settings/index.php"></a> </div>
+            <div class="tb_content_outer">
+                <div class="tb_content"> <a class="tb_titel" href="{ADMIN_URL}/settings/index.php">{SETTINGS}</a> {SETTINGS_OVERVIEW} </div>
+                <!-- ENDE tb_content -->
+            </div>
+            <!-- ENDE tb_content_outer -->
+            <div class="tb_footer"> <a href="{ADMIN_URL}/settings/index.php"></a> </div>
+            <!-- ENDE tb_footer -->
+        </div>
+        <!-- ENDE themebox -->
+    </div>
+    <!-- ENDE col -->
+    <div class="fg6">
+        <!-- ENDE themebox -->
         <div id="module_admintools" class="themebox" style="{DISPLAY_ADMINTOOLS};">
             <div class="tb_header"> <a href="{ADMIN_URL}/admintools/index.php"></a> </div>
             <div class="tb_content_outer">
@@ -49,9 +64,6 @@
             <!-- ENDE tb_footer -->
         </div>
         <!-- ENDE themebox -->
-    </div>
-    <!-- ENDE col -->
-    <div class="fg6">
         <div id="module_media" class="themebox" style="{DISPLAY_MEDIA};">
             <div class="tb_header"> <a href="{ADMIN_URL}/media/index.php"></a> </div>
             <div class="tb_content_outer">
@@ -71,17 +83,6 @@
             </div>
             <!-- ENDE tb_content_outer -->
             <div class="tb_footer"> <a href="{ADMIN_URL}/addons/index.php"></a> </div>
-            <!-- ENDE tb_footer -->
-        </div>
-        <!-- ENDE themebox -->
-        <div id="module_settings" class="themebox" style="{DISPLAY_SETTINGS};">
-            <div class="tb_header"> <a href="{ADMIN_URL}/settings/index.php"></a> </div>
-            <div class="tb_content_outer">
-                <div class="tb_content"> <a class="tb_titel" href="{ADMIN_URL}/settings/index.php">{SETTINGS}</a> {SETTINGS_OVERVIEW} </div>
-                <!-- ENDE tb_content -->
-            </div>
-            <!-- ENDE tb_content_outer -->
-            <div class="tb_footer"> <a href="{ADMIN_URL}/settings/index.php"></a> </div>
             <!-- ENDE tb_footer -->
         </div>
         <!-- ENDE themebox -->

@@ -7,13 +7,10 @@
             <a href="{ADMIN_URL}/pages/sections.php?page_id={PAGE_IDKEY}" style="{DISPLAY_MANAGE_SECTIONS}"> <i class="fa fa-bars"></i> {TEXT_MANAGE_SECTIONS} </a>
         </div>
     </h2>
-
+    
     <h2 class="subheader">
         <span>
-            {TEXT_CURRENT_PAGE}: <b>{PAGE_TITLE}</b> &nbsp;&nbsp;|&nbsp;&nbsp; PageID: <b>{PAGE_ID}</b>
-        </span>
-        <span class="{DISPLAY_MODIFIED}">
-            <i>{LAST_MODIFIED}: {MODIFIED_BY} ({MODIFIED_BY_USERNAME}) - {MODIFIED_WHEN}</i>
+            {TEXT_CURRENT_PAGE}: <b>{PAGE_TITLE}</b> &nbsp;|&nbsp; PageID: <b>{PAGE_ID}</b> &nbsp;|&nbsp; {LAST_MODIFIED}: {MODIFIED_BY} <b>({MODIFIED_BY_USERNAME})</b> - <i>{MODIFIED_WHEN}</i>
         </span>
     </h2>
 </section>

@@ -86,7 +86,7 @@
 </section>
 
 <!-- BEGIN calendar_block -->
-<script type="text/javascript" >
+<script>
 	 var section_id = '{VAR_SECTION_ID}';
 	 var start_date = '{start_date}';
 	 var end_date = '{end_date}';
@@ -98,7 +98,7 @@
 	 var showsTime = {showsTime};
 	 var timeFormat = {timeFormat};
 </script> 
-<script type="text/javascript" src="{ADMIN_URL}/pages/page_calendar.js" ></script> 
+<script src="{ADMIN_URL}/pages/page_calendar.js" ></script> 
 <!-- END calendar_block -->
 
 <!-- END main_block -->

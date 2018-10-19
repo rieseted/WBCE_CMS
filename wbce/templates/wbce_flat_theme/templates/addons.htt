@@ -55,7 +55,7 @@
     <div class="tb_header"> <span class="tb_icon"></span> </div>
     <div class="tb_content_outer">
         <div class="tb_content">
-            <h2 class="page_titel">{TXT_ADMIN_SETTINGS}</h2>
+            <p class="tb_titel">{TXT_ADMIN_SETTINGS}</p>
             <form action="{RELOAD_URL}" method="post">
                 {FTAN}
                 {MESSAGE_RELOAD_ADDONS} <br/>

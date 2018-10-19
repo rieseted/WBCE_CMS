@@ -3,15 +3,15 @@
 <!DOCTYPE html>
 <html lang="{LANGUAGE}">
 <head>
-<title>{TEXT_LOGIN}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="content-type" content="text/html; charset={CHARSET}" />
-<meta http-equiv="content-language" content="{LANGUAGE}" />
-<meta name="description" content="{TEXT_LOGIN}" />
-<meta name="keywords" content="{TEXT_LOGIN}" />
-<link rel="stylesheet" href="{THEME_URL}/css/normalize.css" />
-<link rel="stylesheet" href="{THEME_URL}/css/login.css" />
-<script type="text/javascript" src="{WB_URL}/include/jquery/jquery-min.js"></script>
+    <title>{TEXT_LOGIN}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset={CHARSET}" />
+    <meta http-equiv="content-language" content="{LANGUAGE}" />
+    <meta name="description" content="{TEXT_LOGIN}" />
+    <meta name="keywords" content="{TEXT_LOGIN}" />
+    <link rel="stylesheet" href="{THEME_URL}/css/normalize.css" />
+    <link rel="stylesheet" href="{THEME_URL}/css/login.css" />
+    <script src="{WB_URL}/include/jquery/jquery-min.js"></script>
 </head>
 <body class="page_login" onload="document.login.{USERNAME_FIELDNAME}.focus();">
 
